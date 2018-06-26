@@ -1,5 +1,5 @@
 window.data = {
-    let api = https://raw.githubusercontent.com/Montse2018/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json 
+    let api = "https://raw.githubusercontent.com/Montse2018/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json" 
     let generation = document.querySelector(#generacion) 
     let datosLaboratoria = "";
     let laboratoria = "";
@@ -8,8 +8,8 @@ window.data = {
     let computeGenerationStats = function(){
         fetch(api).then(function(laboratoria){
             console.log(laboratoria.json);}).then(function(datosLaboratoria){
-                console.log(laboratoria.generacion[0]);
-                let generation = laboratoria.generacion[0];
+                console.log(laboratoria.lima.generacion);
+                let generation = laboratoria.lima.generacion;
                 generation.innerHTML = generationAPI;})
      }
 };
