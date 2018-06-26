@@ -1,4 +1,41 @@
 body{
     background-image: url(fondo.jpg);
+    background-size: 86em;
+    
 }
+
+header{
+        image-orientation: left;
+}    
+
+
+#name{
+    text-align: center;
+    margin: 14em 0em 2em 0em;
+}
+
+#usuario{
+    text-align: center;
+    height: 30px;
+    width: 300px;
+}
+#password{
+    text-align: center;
+    
+}
+#contraseña{
+    text-align: center;
+    height: 30px;
+    width: 300px;
+    
+}
+.Menu{
+    text-align: left;
+    display: inline-block;
+    border: 5px solid blue;
+    height: 700px;
+    padding: none;
+}
+
+
 
