@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Base de datos</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <header>
+    <h1><img src="logo.png" width="600" height="150" id="imgLaboratoria"></h1>
+
+  </header>
+
+  <style>
+    body{
+      background-color:  whitesmoke;
+  
+    }
+  </style>
+  <body>
+    <div class ="container" text-left style="margin-top: 40px">
+      <button class="btnSedes" onclick="sedes()">Sedes</button>
+      <div class="mt-5" id="contenido">
+      </div>
+
+    </div>
+
+    <div class ="container" text-left style="margin-top: 40px">
+        <button class="btnGeneracion" onclick="generacion()">Generacion</button>
+        <div class="mt-5" id="contenido">
+        </div>
+  
+    </div>
+
+    <div class ="container" text-left style="margin-top: 40px">
+        <button class="btnAlumnas" onclick="alumnas()">Alumnas</button>
+        <div class="mt-5" id="contenido">
+        </div>
+  
+    </div>
+
+    <script>
+          let contenido = document.querySelector('#contenido')
+          function computeStudentsStats() {
+          fetch('https://api.myjson.com/bins/17ewfi')
+          .then(res => res.json())
+          .then(data => {
+            contenido.innerHTML = `
+              <p>Generacion: ${data.lima.generacion['0']}<p>
+            `
+    
+    </script>
+
+
+
+        <footer>
+            <button type="logout" name"cerrar Sesion">Serrar Sesion</button>
+        </footer>
+    
+        
+        <script src="main.js"></script>
+        <script src="data.js"></script>
+  </body>
+</html>

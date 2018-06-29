@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
+  <style>
+    body{
+    background-image: url(fondo.jpg);
+    background-size: 86em;
+    }
+  </style>
+
   <body>
     <section>
       <form>
-      <div id="logo">
-        <input type="image"
-      </div>
       <div id="name">
         <input type="usuario" placeholder="Usuario" id="usuario">
         <br>
@@ -18,22 +23,10 @@
       <div id="password">
         <input type="txt" placeholder="Contraseña" id="contraseña">
         <br>
-        <button type="submit" name="ingreso">Iniciar Sesion</button>
+        <a href="menu.html"><input class="button" type="button" name="ingreso" value="Iniciar Sesión"></a>
       </div>
     </form>
     </section>
-
-    <section>
-        <form>
-          <div class="Menu">
-            <button id="Generaciones" name="Generaciones">Generaciones</button>
-            <br>
-            <button id="Sedes" name="Sedes">Sedes</button>
-            <br>
-            <button id="Alumnas" name="Alumnas">Alumnas</button>
-          </div>
-       </form>
-      </section>
 
     
     <script src="main.js"></script>
