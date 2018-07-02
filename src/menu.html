@@ -19,36 +19,40 @@
   </style>
   <body>
     <div class ="container" text-left style="margin-top: 40px">
-      <button class="btnSedes" onclick="sedes()">Sedes</button>
+      <button id="btnSedes" name="sedes()">Sedes</button>
       <div class="mt-5" id="contenido">
       </div>
 
     </div>
 
     <div class ="container" text-left style="margin-top: 40px">
-        <button class="btnGeneracion" onclick="generacion()">Generacion</button>
+        <button id="btnGeneracion" name="generacion()">Generacion</button>
         <div class="mt-5" id="contenido">
         </div>
   
     </div>
 
     <div class ="container" text-left style="margin-top: 40px">
-        <button class="btnAlumnas" onclick="alumnas()">Alumnas</button>
+        <button class="btnAlumnas" name="alumnas()">Alumnas</button>
         <div class="mt-5" id="contenido">
         </div>
   
     </div>
+    <div id="laboratoria">
+      <ul>laboratoria.json</ul>
+    </div>
+
 
     <script>
-          let contenido = document.querySelector('#contenido')
-          function computeStudentsStats() {
-          fetch('https://api.myjson.com/bins/17ewfi')
-          .then(res => res.json())
-          .then(data => {
+        let contenido = document.querySelector('#contenido')
+            fetch('https://api.myjson.com/bins/17ewfi')
+        .then(res => res.json())
+        .then(data => {
             contenido.innerHTML = `
-              <p>Generacion: ${data.lima.generacion['0']}<p>
+            <p>Sede: ${data.lima}<p>
             `
-    
+          })
+        
     </script>
 
 
