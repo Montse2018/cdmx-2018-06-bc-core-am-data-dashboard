@@ -1,61 +1,65 @@
+const laboratoria = "https://api.myjson.com/bins/17ewfi";
 
-        /*window.data = {
-        API :() =>{
-            let laboratoria ="https://api.myjson.com/bins/17ewfi";
-            fetch(laboratoria).then(response => {
-                return response.json();
-                console.log(response.json)
-            }).then(computeGenerationStats => {
-                let sedes = '';
-                //let generacion = '';
-                sedes = Object.getOwnPropertyNames(computeGenerationStats);
-                for(i=0; i< sedes.length; i++){
-                    console.log(sedes[i])
-                    //sedes = sedes[i];
-                    const generacion = '';
-                    for(j=0; j< generacion.length; j++){
-                        console.log(generacion[j])
+fetch(laboratoria)
+.then(response => response.json())
+.then(data => {
+    // console.log(data)
+    //console.log(data.lima.generacion)
+    // console.log(data.lima.generacion.cuarta)
+    //coumputeGenerationStats(data);
+    renderInfo(data);
+    renderInfo2(data);
+    renderInfo3(data);
+})
+
+/*window.data = {
+    coumputeStudentsStats: (data) => {
+        const studentsArray = [];
+        const student = {
+            name: '',
+            email: '',
+            campus: '',
+            generation: '',
+            stats: {
+                stats: '',
+                completedPercentage: 0,
+                topics: {
+                    completedPercentage: 0,
+                    percentajeDuration: 0,
+                    subtopics: {
+                        completedPercentage: 0,
+                        type: '',
+                        duration: 0,
+                    }
                 }
-                //let generacion = '';
-                /*sedes = sedes[i];
-                const generacion = Object.getOwnPropertyNames(computeGenerationStats);
-                for(j=0; j< generacion.length; j++){
-                    console.log(generacion[j])
             }
-        })
+        }
     }
-};*/
+},
 
-window.computeStudentsStats = (laboratoria) => {
+window.computeGenerationStats = (laboratoria) => {
+        const newArray = [],
+        const generation = {
+            campus: '',
+            generation: '',
+            average: 0,
+            count: 0,
+        }
+    },
 
-}
-
-window.computeGenerationsStats = (laboratoria) => {
-    const generationsArray = [];
-    const obj = {
-        campus: '',
-        generation: '',
-        average: 0,
-        count: 0,
+window.sortStudents = (laboratoria) => {
+    const sort = [];
+    sortStudent = {
+        students: '',
+        orderBy: '',
+        orderDirection: '',
     };
-    let average = 0;
-    for (key in laboratoria) {
-        obj.campus = key;
-        average = 0;
-        const generations = Object.keys(laboratoria[key].generacion);
-        generations.forEach((generation) => {
-            obj.generation = generation;
-            const students = laboratoria[key].generacion[generation].estudiantes;
-            for (student in students) {
-                average += students[student].progreso.porcentajeCompletado;
-                average = average / students.length;
-                obj.average = average;
-                obj.count = students.length;
-                generationsArray.push(obj);
+},
 
-            }
-        })
-
+window.filterStudents: (laboratoria) => {
+    const filterSt = [];
+    filterStudent = {
+        students: '',
+        search: '',
     }
-    return generationsArray;
-}
+};

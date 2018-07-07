@@ -7,7 +7,7 @@
   </head>
 
   <header>
-    <h1><img src="logo.png" width="600" height="150" id="imgLaboratoria"></h1>
+    <h1><img src="../src/fotos/Laboratoria-Logo.png" id="imgLaboratoria"></h1>
 
   </header>
 
@@ -18,44 +18,47 @@
     }
   </style>
   <body>
-    <div class ="container" text-left style="margin-top: 40px">
-      <button id="btnSedes" name="sedes()">Sedes</button>
-      <div class="mt-5" id="contenido">
+
+      <div class ="container" text-left>
+          <button id="btnSedes" class="btnSedes" name="sedes()">Sedes</button>
+          <div id="result1">
+            <div class="card">
+              <div class="info">
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div id="mex-gen"></div>
+                  <div id="santiago-gen"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container1" text-left style="margin-top: 40px">
+          <button id="btnGeneracion" name="generacion()">Generacion</button>
+          <div id="result2">
+              <div class="card">
+                <div class="info2">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-    <div class ="container" text-left style="margin-top: 40px">
-        <button id="btnGeneracion" name="generacion()">Generacion</button>
-        <div class="mt-5" id="contenido">
-        </div>
-  
-    </div>
-
-    <div class ="container" text-left style="margin-top: 40px">
-        <button class="btnAlumnas" name="alumnas()">Alumnas</button>
-        <div class="mt-5" id="contenido">
-        </div>
-  
-    </div>
-    <div id="laboratoria">
-      <ul>laboratoria.json</ul>
-    </div>
-
-
-    <script>
-        let contenido = document.querySelector('#contenido')
-            fetch('https://api.myjson.com/bins/17ewfi')
-        .then(res => res.json())
-        .then(data => {
-            contenido.innerHTML = `
-            <p>Sede: ${data.lima}<p>
-            `
-          })
+    
         
-    </script>
-
-
+        <div class="container2" text-left style="margin-top: 40px">
+          <button id="btnAlumnas" name="alumnas()">Alumnas</button>
+          <div id="result3">
+              <div class="card">
+                <div class="info3">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <footer>
             <button type="logout" name"cerrar Sesion">Serrar Sesion</button>

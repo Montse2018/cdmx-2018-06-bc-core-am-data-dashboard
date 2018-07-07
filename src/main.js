@@ -1,97 +1,157 @@
-let buttonSedes = document.getElementById("btnSedes");
-let buttonGeneracion = document.getElementById("btnGeneracion");
+const container = document.getElementById("result1");
+const container1 = document.getElementById("result2");
+const container2 = document.getElementById("result3");
 
-buttonSedes.addEventListener ("click",  () => {
-    window.data.laboratoria()
-})
+renderInfo = (data) => {
+    document.getElementById("btnSedes").addEventListener("click", (event) => {
+        let result1 = '';
+        // console.log(Object.keys(data))
+        // console.log(data.lima.generacion)
+        const sede = Object.keys(data);
+        //const generacion = data.lima.generacion;
+        for(key in data) {
+            if(data.hasOwnProperty(key))
+            //console.log(Object.value(generacion))
 
-buttonGeneracion.addEventListener ("click", () => {
-    window.data.generacion()
-})
+            result1 += `<div class="card">
+                            <div class="info">
+                                <a href="#" class="sedes" id ="${key}">${key}</a>
+                                <div class="lim-gen"></div>
+                                
+                                <div id="mex-gen"></div>
+                                <div id="santiago-gen"></div>
+                            </div>
+                        </div>
+                    </div>`              
+        }
+        container.innerHTML = result1;
+        const campus = document.getElementsByClassName("sedes");
+        const containerGenLima = document.getElementsByClassName("lim-gen")
+        for (let i = 0; i < campus.length; i ++) {
+            campus[i].addEventListener("click", (event) => {
+                console.log(event.target.nextSibling)
+                const campus = event.target.innerHTML;
+                console.log(campus)
+                let result2 = '';
+                const generacion = Object.keys(data[campus].generacion);
+                generacion.forEach((generacion) => {
+                    result2 += `<div class="card">
+                                <div class="info">
+                                    <button ref="#" class="generacion" id="${generacion}> ${generacion}</button>
+                                </div>
+                            </div>
+                        </div>`
+                })
+                containerGenLima.innerHTML = result2;
+                //console.log(data[key].generacion)
+                
+        
+            })
+        }
+        //campus = document.getElementsByClassName("sedes");
+        const containerGenMex = document.getElementById("mex-gen")
+        for (let j = 0; j < campus.length; j ++) {
+            campus[j].addEventListener("click", (event) => {
+                console.log(event.target.nextSibling)
+                const campus = event.target.innerHTML;
+                console.log(campus)
+                let result2 = '';
+                const generacion = Object.keys(data[campus].generacion);
+                generacion.forEach((generacion) => {
+                    result2 += `<div class="card">
+                                <div class="info">
+                                    <p> ${generacion}</p>
+                                </div>
+                            </div>
+                        </div>`
+                })
+                containerGenMex.innerHTML = result2;
+                //console.log(data[key].generacion)
+                
+        
+            })
+        }
 
-/*const json = "https://api.myjson.com/bins/17ewfi";
-
-const getData = () => {
-    fetch(json)
-    .then( response => response.json() )
-    .then((res) => {
-        let sedes = '';
-        //let generacion = '';
-        sedes = Object.getOwnPropertyNames(computeGenerationStats);
-        for(i=0; i< sedes.length; i++){
-            console.log(sedes[i])
-        //const generations = computeGenerationsStats(res);
-        //const users = computeStudentsStats(res);
-        //drawCampus(generations);
-        let buttonGeneracion = document.getElementById("btnGeneracion").addEventListener("click", () => {
-            window.data.API() 
-        })
-    }
-    //.catch((error) => {
-        //console.log(error);
+        //container2.innerHTML = result2;
     })
-};*/
-
-/*let laboratoria ="https://api.myjson.com/bins/17ewfi";
-    let xhttp = newXMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if(this.readyState == 4 && this.status == 200) {
-        let respuesta = JSON.parse(xhhttp.responseText);
-        let laboratori = respuesta.laboratoria;
-        let salida = '';
-        let sedes = '';
-        sedes = Object.getOwnPropertyNames(computeGenerationStats);
-        for(let i=0; i <laboratoria.length; i++) {
-            salida += $(laboratoria[i].sedes)
-        }
-        let buttonSedes = document.getElementById("btnSedes").innerHTML = salida;
-    }
-    }
-    xhttp.open("GET", "laboratoria.json", true);
-    xhhttp.send();*/
-
-   /*fetch(laboratoria).then(response => {
-        return response.json();
-    }).then(datos => {
-        if(this.readyState == 4 && this.status == 200)
-        let respuesta = respose.json
-    })*/
-
-    let laboratoria ="https://api.myjson.com/bins/17ewfi";
-    fetch(laboratoria).then(response => {
-        return response.json();
-        console.log(response.json)
-    }).then(computeGenerationStats => {
-        let sedes = '';
-        //let generacion = '';
-        sedes = Object.getOwnPropertyNames(computeGenerationStats);
-        for(i=0; i< sedes.length; i++){
-            console.log(sedes[i])
-            //sedes = sedes[i];
-            let generacion = '';
-            for(j=0; j< generacion.length; j++){
-                console.log(generacion[j])
-            }
-        }
-    });
 
 
-/*getData();
-
-const drawCampus = (data) => {
-    const sedes = Object.keys(data);
-
-    const containerCampus = document.getElementById('btnSedes');
-    sedes.forEach((sede) => {
-        const option = document.createElement('option');
-        option.innerHTML = sede;
-        containerCampus.appendChild(option);
-    });
-
-    containerCampus.addEventListener('change', iteratorGenerations);
-};
+}
+//renderInfo2 = (data) => {
+  //document.getElementById("btnGeneracion").addEventListener("click", 
+  // const mostrargen = 
 
 
-/*const drawGenerations = (e) => {
-    //computeGenerationsStats(laboratoria)
-}*/
+   /* renderInfo3 = (data) => {
+        document.getElementById("btnGeneracion").addEventListener("click", (event) => {
+            
+        })
+      for ( sede in data) {
+          if (data.hasOwnProperty(sede)) {
+              const element = data[sede];
+              let generacionSede = element;
+              console.log(sede)
+                for ( key in generacionSede) {
+                    if (generacionSede.hasOwnProperty(key)) {
+                        const sedeUnica = generacionSede[key];
+                        console.log(generacionSede, sedeUnica)
+                        result2 +=`<div class="card">
+                                     <div class="info">
+                                       <p> ${generacion}</p>
+                                    </div>
+                                 </div>
+                            </div>`
+                
+                    }
+                }
+                container2.innerHTML = result2;
+          }
+      }
+        document.getElementById("btnAlumnas").addEventListener("click", (event) => {
+            let result3 = '';
+            const estudiantes = data.lima.generacion.cuarta.estudiantes;
+            console.log(data.lima.generacion.cuarta.estudiantes[0])
+            /*for (let i=0; i<estudiantes.length; i++) {
+                average += alumnas[student].progreso.porcentajeCompletado;
+                average = average / alumnas.length;
+                obj.average = average;
+                obj.count = students.length;*/
+                    //const element = object[student];*/
+                    //for (const key in estudiantes) {
+                       // if (estudiantes.hasOwnProperty(key)) {
+                            //const element = estudiantes[key];
+                            //console.log(lima.cuarta.element)
+                            //console.log(lima.cuarta.element.nombre)
+                            //console.log(element.correo)
+                            //console.log(element.turno)
+                            //console.log(elemento.progreso.duracionPrograma)
+                    //average += element[student].progrego.porcentajeCompletado
+                    //console.log(element[student].progrego.porcentajeCompletado)
+            //result3 += `<div class="cardAlumnas">
+                            /*<div class="info3">
+                                <p>Correo: ${element.correo}</p>
+                                <p>Nombre: ${element.nombre}</p>
+                                <p>Turno: ${element.turno}</p>
+                            </div>
+                        </div>  
+                    </div>`
+                    
+                        }
+                        container2.innerHTML = result3;
+                    }
+
+            })
+            //container2.innerHTML = result3;
+    }*/ 
+    
+        
+        
+    
+    
+    
+
+
+
+
+        
+    
