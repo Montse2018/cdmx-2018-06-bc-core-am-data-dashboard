@@ -39,7 +39,6 @@ h1{
 .info{
     margin: 20%;
     border: none;
-    font-size: 98%;
 }
 
 body{
@@ -61,21 +60,31 @@ body{
     border: none;
     padding: none;
     background-color: yellow;
-    position:fixed;
-    top: 0;
     
+    top: 0;
 
+}
+.container1{
+    display: inline-block;
+}
+.container2{
+    display: inline-block;
+}
+.alumnas{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 65%;
+    height: 2200px;
+    
 }
 a{
     text-transform: uppercase;
     font-size: 98%;
 }
 
-.container2{
-    display: inline-block;
-    width: 80%;
-    float: right;
-}
 .cardAlumnas{
     width: 200px;
     height: 200px;
@@ -84,36 +93,64 @@ a{
     background-color: aquamarine;
     color: #FFFFFF;
     text-align: center;
-    border: 1px solid grey;
-    color: black;
+    border: 1px solid aqua
   }
-}
-.sedes{
-    background-color: aqua;
+
+
+.btnLima{
+
     width: 200px;
     text-align: center;
+    display: inline-block;
 }
-.generacion{
-
+.btnMexico{
+ 
     width: 200px;
+    display: inline-block;
 }
 
-.btnSedes{
+.btnLima{
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
     margin-top: 60%;
     background-color: yellow;
     border: none;
-    margin-left: 25%;
+    display: inline-block;
     text-transform: uppercase;
 }
 
-#btnGeneracion{
-    font-size: 20px;
+.btnMexico{
+    font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 30%;
+    margin-top: 60%;
+    background-color: yellow;
+    border: none;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
+.btnSantiago{
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60%;
+    background-color: yellow;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.container3{
+    border: black;
+}
+#result4{
+    display: inline-flex;
+    border: 1px solid black;
+}
+
+#result5{
+    border: 1px solid black;
+    display: inline-flex;
+}
 /*.Menu{
     text-align: left;
     display: inline-block;
