@@ -10,7 +10,8 @@ fetch(laboratoria)
     //coumputeGenerationStats(data);
     renderInfo(data);
     renderInfo2(data);
-    //renderInfo3(data);
+    renderInfo3(data);
+    //renderInfo4(data);
 })
 
 window.data = {

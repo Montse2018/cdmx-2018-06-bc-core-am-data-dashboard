@@ -27,7 +27,7 @@ footer{
 
 #imgLaboratoria{
     text-align: center;
-    margin-left: 368px;
+    margin-left: 280px;
     margin-top: 4px;
 }
 
@@ -37,7 +37,7 @@ h1{
 }
 
 .info{
-    margin: 20%;
+    
     border: none;
 }
 
@@ -46,73 +46,97 @@ body{
 
 }
 
-#result3{
-    
-    display: inline-block;
-    
-    
-}
+
 
 .container{
     display: inline-block;
     width: 200px;
-    height: 100%;
     border: none;
     padding: none;
     background-color: yellow;
-    
     top: 0;
 
 }
 .container1{
     display: inline-block;
+    margin-left: 7%;
 }
 .container2{
     display: inline-block;
+    margin-left: 10%;
 }
-.alumnas{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 65%;
-    height: 2200px;
-    
-}
-a{
+
+li{
     text-transform: uppercase;
-    font-size: 98%;
+    font-size: 80%;
+}
+
+p{
+    font-size: 56%;
 }
 
 .cardAlumnas{
-    width: 200px;
+    width: 180px;
     height: 200px;
-    display: inline-flex;
+    display: inline-block;
     margin: 0.5rem;
     background-color: aquamarine;
-    color: #FFFFFF;
+    color: black;
     text-align: center;
-    border: 1px solid aqua
+    border: 1px solid black;
   }
-
-
-.btnLima{
-
-    width: 200px;
+.cardAlumanas2{
+    width: 180px;
+    height: 200px;
+    display: inline-block;
+    margin: 0.5rem;
+    background-color: orchid;
+    color: black;
     text-align: center;
-    display: inline-block;
+    border: 1px solid black;
 }
-.btnMexico{
- 
-    width: 200px;
+.cardAlumanas3{
+    width: 180px;
+    height: 200px;
     display: inline-block;
+    margin: 0.5rem;
+    background-color: burlywood;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+#menu{
+    background-color: yellow;
+    height: 125px;
+    text-align: center;
+}
+
+#menu2{
+    text-align: center;
+    border: 0.2em double blueviolet;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#menu3{
+    text-align: center;
+    border: 0.2em double blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+#menu4{
+    text-align: center;
+    border: 0.2em double blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
 }
 
 .btnLima{
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 60%;
     background-color: yellow;
     border: none;
     display: inline-block;
@@ -122,7 +146,7 @@ a{
 .btnMexico{
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 60%;
+    
     background-color: yellow;
     border: none;
     display: inline-block;
@@ -132,24 +156,111 @@ a{
 .btnSantiago{
     font-size: 28px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 60%;
     background-color: yellow;
     border: none;
     text-transform: uppercase;
-    display: inline-block;
 }
 
 .container3{
     border: black;
+    display: inline-block;
+    
 }
-#result4{
-    display: inline-flex;
-    border: 1px solid black;
+.container4{
+    border: black;
+    display: inline-block;
+}
+.container5{
+    border: black;
+    display: inline-block;
 }
 
-#result5{
-    border: 1px solid black;
-    display: inline-flex;
+#lima-cuarta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#lima-quinta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
+}
+#lima-tercera{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
+}
+
+.container6{
+    border: black;
+    display: inline-block;
+    
+}
+.container7{
+    border: black;
+    display: inline-block;
+}
+.container8{
+    border: black;
+    display: inline-block;
+}
+
+#mexico-cuarta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#mexico-quinta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
+}
+#mexico-tercera{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
+}
+
+.container9{
+    border: black;
+    display: inline-block;
+    
+}
+.container10{
+    border: black;
+    display: inline-block;
+}
+.container11{
+    border: black;
+    display: inline-block;
+}
+
+#santiago-cuarta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#santiago-quinta{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
+}
+#santiago-tercera{
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; 
+    display: inline-block;
 }
 /*.Menu{
     text-align: left;
